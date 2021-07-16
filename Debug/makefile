@@ -61,8 +61,8 @@ all: main-build
 main-build: week11\ Protocal.elf secondary-outputs
 
 # Tool invocations
-week11\ Protocal.elf: $(OBJS) $(USER_OBJS) C:\git\Week11-UART-Protocol\week11\ Protocal\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "week11 Protocal.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\git\Week11-UART-Protocol\week11 Protocal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="week11 Protocal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+week11\ Protocal.elf: $(OBJS) $(USER_OBJS) D:\Git\Week11\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "week11 Protocal.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Git\Week11\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="week11 Protocal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
